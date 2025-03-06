@@ -1,11 +1,11 @@
 ﻿  EntryPoint.cpp
-C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\EntryPoint.cpp(144,35): warning C4244: '초기화 중': '_Rep'에서 'uint32_t'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\EntryPoint.cpp(144,35): warning C4244:         with
-C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\EntryPoint.cpp(144,35): warning C4244:         [
-C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\EntryPoint.cpp(144,35): warning C4244:             _Rep=__int64
-C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\EntryPoint.cpp(144,35): warning C4244:         ]
-C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\EntryPoint.cpp(302,57): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\EntryPoint.cpp(303,57): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\EntryPoint.cpp(375,45): warning C4244: '=': 'float'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\EntryPoint.cpp(376,45): warning C4244: '=': 'float'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\EntryPoint.cpp(146,35): warning C4244: '초기화 중': '_Rep'에서 'uint32_t'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\EntryPoint.cpp(146,35): warning C4244:         with
+C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\EntryPoint.cpp(146,35): warning C4244:         [
+C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\EntryPoint.cpp(146,35): warning C4244:             _Rep=__int64
+C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\EntryPoint.cpp(146,35): warning C4244:         ]
+C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\EntryPoint.cpp(304,57): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\EntryPoint.cpp(305,57): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\EntryPoint.cpp(377,45): warning C4244: '=': 'float'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\EntryPoint.cpp(378,45): warning C4244: '=': 'float'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   WindowsProject1.vcxproj -> C:\Users\Ahnjiwoo\Desktop\Projects\DirectXDrawTriangleSample\x64\Debug\TriangleDemo.exe

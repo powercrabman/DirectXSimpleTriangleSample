@@ -96,6 +96,7 @@ bool             Init();
 bool             InitD3D();
 bool             InitImgui();
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
+LRESULT CALLBACK ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 INT_PTR CALLBACK About(HWND, UINT, WPARAM, LPARAM);
 bool             D3DCheckFail(HRESULT hr, const wchar_t* msg);
 bool             UpdateConstantBuffer(void* data, size_t size, ComPtr<ID3D11Buffer>& buffer);
