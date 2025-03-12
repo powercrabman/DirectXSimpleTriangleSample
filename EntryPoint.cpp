@@ -8,17 +8,17 @@
 #include <d3d11.h>
 #include <d3dcompiler.h>
 #include <d3dcompiler.inl>
-#include <directxtk/SimpleMath.h>     // vcpkg install directxtk
-#include <directxtk/SimpleMath.inl>   // vcpkg install directxtk
+#include <directxtk/SimpleMath.h>    
+#include <directxtk/SimpleMath.inl>  
 #include <sstream>
 #include <wrl/client.h>
 using namespace DirectX;
 using namespace DirectX::SimpleMath;
 using Microsoft::WRL::ComPtr;
 
-#include <imgui.h>              // vcpkg install imgui
-#include <imgui_impl_dx11.h>    // vcpkg install imgui[directx11-binding]
-#include <imgui_impl_win32.h>   // vcpkg install imgui[win32-binding]
+#include <imgui.h>            
+#include <imgui_impl_dx11.h>  
+#include <imgui_impl_win32.h> 
 
 #pragma comment(lib, "d3d11.lib")
 #pragma comment(lib, "d3dcompiler.lib")
@@ -56,7 +56,7 @@ struct __declspec(align(16)) ConstantBuffer
 struct D3DRenderer
 {
     ComPtr<ID3D11Device>        device;      // factory
-    ComPtr<ID3D11DeviceContext> context;     // draw
+    ComPtr<ID3D11DeviceContext> context;     // draw 
     ComPtr<IDXGISwapChain>      swapChain;   // back buffer
 
     ComPtr<ID3D11RenderTargetView> renderTargetView;   // back buffer
@@ -233,6 +233,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE     hInstance,
                 FLOAT clearColor[] = { 0.f, 0.f, 0.f, 1.f };
                 c->ClearRenderTargetView(g_renderer.renderTargetView.Get(), clearColor);
                 c->DrawIndexed(_countof(g_triangleIndices), 0, 0);
+                //c->Draw(_countof(g_triangleVertices), 0);
             }
 
             // Render Imgui
@@ -326,6 +327,36 @@ bool Init()
 
     return TRUE;
 }
+
+/*
+
+그래픽 api 왜 씀? -> GPU 파이프라인을 타려고 DriectX, OpenGL, Vulkan, Metal => Rendering API
+GPU 실행하는 방법, 순서 정해져있어 -> 순서를 지켜서 프로그래밍 해야함
+
+Application Stage -> Geometry Stage -> Raterizer Stage -> Pixel Stage
+
+Geometry Stage: 기하 도형을 다룬다. (버텍스를 변형(회전, 평행이동, 크기조절), [분할(Tesselation), 추가(Geometry Shader)]) -> Programmable Unit (Shader Code)
+
+Rasterizer: 삼각형 채우기, 삼각형을 채우는 세팅 -> 삼각형을 세팅 (삼각형 setup) -> State Unit 
+
+Pixel Stage: 픽셀 채우기, 색칠하기
+
+==================================================
+
+D3D11 Core Class
+1. ID3D11Device -> Factory Method (Graphic Resources Create Class)
+2. ID3D11DeviceContext -> Pipeline State 를 설정하는 녀석
+
+1. Input Assembler -> Geometry Data Passing (Vertex, [Index], Primitive Topology)
+- Vertex 정점: 위치, 색상 ect
+- Index 정점을 잇는 순서 -> 메모리를  아껴야하기 때문에
+ -> Vertex로 특정한 점만 찍어놓고 나머지는 interpolate
+ - Topology : 어떻게 인덱스를 설정할 것인가?
+
+2. Vertex Shader
+
+
+*/
 
 bool InitD3D()
 {
